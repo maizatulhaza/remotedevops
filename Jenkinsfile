@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Replace with actual build command
-                sh 'mvn clean install'
+                bat 'start /b my_script.bat'
             }
         }
 
