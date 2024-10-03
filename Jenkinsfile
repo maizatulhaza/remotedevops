@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Replace with actual build command
-                bat 'start /b my_script.bat'
+                 bat 'mvn clean install'
             }
         }
 
         stage('Test') {
             steps {
                 // Replace with test command
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
     }
