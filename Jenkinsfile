@@ -1,18 +1,20 @@
 pipeline {
     agent any
+    
+    tools {
+        maven 'maven' // This refers to the name you gave the Maven installation
+    }
 
     stages {
         stage('Build') {
             steps {
-                // Replace with actual build command
-                 bat 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
 
         stage('Test') {
             steps {
-                // Replace with test command
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
     }
